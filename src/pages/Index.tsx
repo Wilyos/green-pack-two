@@ -7,10 +7,12 @@ import GallerySection from '@/components/GallerySection';
 import QuoteModal from '@/components/QuoteModal';
 import FAQSection from '@/components/FAQSection';
 import VisualComparisonSection from '@/components/VisualComparisonSection';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 const Index = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [showMobileCta, setShowMobileCta] = useState(false);
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     const timer = window.setTimeout(() => {
@@ -26,10 +28,10 @@ const Index = () => {
       <Header onOpenModal={() => setIsModalOpen(true)} />
       <HeroSection onOpenModal={() => setIsModalOpen(true)} />
       <VisualComparisonSection />
-      <FeaturesSection />
+      {!isMobile && <FeaturesSection />}
       <MOQSection />
       <GallerySection />
-      <FAQSection />
+      {!isMobile && <FAQSection />}
       <footer className="py-12 pb-32 md:pb-12 border-t border-border text-center">
         <p className="text-sm text-muted-foreground">© 2026 Sistemas Litograficos. Todos los derechos reservados.</p>
       </footer>

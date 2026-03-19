@@ -35,9 +35,9 @@ const MOQSection = () => {
           </div>
         </div>
 
-        <div className="mx-auto mt-10 inline-block px-8 py-4 bg-secondary-foreground/10 backdrop-blur-md rounded-2xl border border-secondary-foreground/10">
+        <div className="mt-10 w-full max-w-xs mx-auto px-8 py-4 bg-secondary-foreground/10 backdrop-blur-md rounded-2xl border border-secondary-foreground/10">
           <span className="text-sm font-bold uppercase tracking-widest text-primary">Pedido minimo para migrar</span>
-          <div className="text-5xl font-black mt-2">1.000 unidades</div>
+          <div className="text-4xl md:text-5xl font-black mt-2">1.000 unidades</div>
         </div>
       </motion.div>
     </section>
