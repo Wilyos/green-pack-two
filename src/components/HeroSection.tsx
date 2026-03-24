@@ -56,7 +56,7 @@ const HeroSection = ({ onOpenModal }: HeroSectionProps) => {
           <h1 className="text-[2.25rem] sm:text-6xl lg:text-7xl font-bold tracking-tight leading-[0.98] [text-wrap:pretty]">
             <span className="block sm:hidden">
               Tu empaque tambien vende.
-              <span className="text-primary block">Haz que tu caja se vea de marca.</span>
+              <span className="text-primary block">Haz que tu caja se vea Premium.</span>
             </span>
             <span className="hidden sm:inline">
               Tu empaque tambien vende.{' '}
