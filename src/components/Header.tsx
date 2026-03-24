@@ -23,7 +23,7 @@ const Header = ({ onOpenModal }: HeaderProps) => {
           className="py-2.5 px-4 sm:px-6 text-sm border border-border hover:bg-muted rounded-full font-semibold transition-all shadow-sm whitespace-nowrap"
         >
           <span className="sm:hidden">Cotizar cambio</span>
-          <span className="hidden sm:inline">Cotizar cambio a papel</span>
+          <span className="hidden sm:inline">Cotizar ahora</span>
         </motion.button>
       </div>
     </nav>

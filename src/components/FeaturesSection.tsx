@@ -1,10 +1,10 @@
 import { motion } from 'framer-motion';
-import { Leaf, ShieldCheck, Recycle } from 'lucide-react';
+import { Gift, ShieldCheck, Palette } from 'lucide-react';
 
 const features = [
-  { icon: <Leaf />, title: "Menos residuos que pesan en la conciencia", desc: "Sabes que el icopor casi siempre termina en la basura o en el entorno. Al migrar tu empaque principal a kraft o maulle, das un paso concreto hacia una gestion mas responsable y menos contaminante." },
-  { icon: <Recycle />, title: "Un empaque que puede tener segunda vida", desc: "El papel kraft o maulle puede entrar a rutas de reciclaje cuando esta limpio y seco, lo que aumenta las posibilidades de que el material se aproveche y no se pierda como residuo." },
-  { icon: <ShieldCheck />, title: "Tu cliente siente que eligio mejor", desc: "Cada empaque habla por tu marca. Un empaque de papel comunica cuidado, preocupacion por el planeta y te diferencia de quienes siguen entregando en icopor." },
+  { icon: <Gift />, title: "Tu caja parece un regalo", desc: "Un empaque de papel bien diseñado se siente como un detalle pensado, no como algo para salir del paso. El momento de abrir la caja genera expectativa y mejora la experiencia." },
+  { icon: <Palette />, title: "Tu marca entra a cada casa", desc: "Al imprimir logo, colores y mensajes en la caja, tu marca se queda en la mesa, en la foto y en la memoria del cliente mucho despues de la entrega." },
+  { icon: <ShieldCheck />, title: "Mejor percepcion, mejores conversaciones", desc: "Un empaque pensado comunica que te importan los detalles. Eso se traduce en mas reseñas positivas, recomendaciones y ganas de volver a comprar." },
 ];
 
 const FeaturesSection = () => {
@@ -13,8 +13,8 @@ const FeaturesSection = () => {
       <div className="absolute left-1/2 top-10 h-40 w-40 -translate-x-1/2 rounded-full bg-primary/10 blur-3xl" />
       <div className="max-w-7xl mx-auto px-5 md:px-6 relative">
         <div className="max-w-3xl mb-12">
-          <h2 className="text-4xl font-bold tracking-tight">Por que usar menos icopor y pasar a papel</h2>
-          <p className="text-muted-foreground mt-3">Cambiar icopor por empaque de papel no es solo una decision tecnica: es la forma en que tu negocio le dice a clientes y equipo interno que quiere contaminar menos y hacer las cosas distinto.</p>
+          <h2 className="text-4xl font-bold tracking-tight">Por que tu empaque debe verse de marca</h2>
+          <p className="text-muted-foreground mt-3">Tu producto ya hace el trabajo. Ahora el empaque puede hacer algo mas: subir la percepcion de valor, reforzar tu marca en cada entrega y dejar una sensacion que tus clientes quieran compartir.</p>
         </div>
         <div className="grid md:grid-cols-3 gap-8">
           {features.map((f, i) => (

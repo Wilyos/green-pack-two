@@ -1,9 +1,10 @@
 import { motion } from 'framer-motion';
 
 const images = [
-  { src: '/img 1.png', alt: "Empaque de papel kraft o maulle - vista principal" },
-  { src: '/img 2.png', alt: "Empaque de papel personalizado - vista lateral" },
-  { src: '/img 3.png', alt: "Empaque reciclable personalizado - detalle de marca" },
+  { src: '/box/box1.png', alt: "Empaque de papel de calidad personalizado - vista principal" },
+  { src: '/box/box2.png', alt: "Empaque de papel personalizado - vista lateral" },
+  { src: '/box/box3.png', alt: "Empaque de papel personalizado - detalle de marca" },
+  { src: '/box/box4.png', alt: "Empaque de papel de calidad personalizado - vista desde arriba" },
 ];
 
 const GallerySection = () => {
@@ -20,7 +21,7 @@ const GallerySection = () => {
             >
               Asi se ve cuando tu marca decide cambiar
             </motion.h2>
-            <p className="text-muted-foreground mt-2">Tus clientes siguen recibiendo un empaque funcional, pero ahora sienten que estan apoyando un negocio que toma decisiones mas coherentes con el cuidado del entorno.</p>
+            <p className="text-muted-foreground mt-2">Tus clientes siguen recibiendo un empaque funcional, pero ahora la caja se ve de marca, se siente de mayor valor y da ganas de tomarle foto.</p>
           </div>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">

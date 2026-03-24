@@ -35,7 +35,7 @@ const QuoteModal = ({ isOpen, onClose }: QuoteModalProps) => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!validate()) return;
-    const message = `Hola, mi nombre es ${formData.name.trim()} y te contacto desde ${formData.company.trim()}. Quiero cotizar el cambio de cajas de icopor a empaques de papel que vi en la pagina. Material preferido: ${formData.material}. Tipo de impresion: ${formData.printType}. Me interesan ${formData.qty} unidades y mi numero de contacto es ${formData.phone.trim()}.`;
+    const message = `Hola, mi nombre es ${formData.name.trim()} y te contacto desde ${formData.company.trim()}. Quiero cotizar el cambio de cajas de icopor a empaques de papel de calidad personalizados que vi en la pagina. Material preferido: ${formData.material}. Tipo de impresion: ${formData.printType}. Me interesan ${formData.qty} unidades y mi numero de contacto es ${formData.phone.trim()}.`;
     window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`, '_blank');
     onClose();
   };
@@ -62,8 +62,8 @@ const QuoteModal = ({ isOpen, onClose }: QuoteModalProps) => {
             <button onClick={onClose} className="absolute top-6 right-6 p-2 hover:bg-muted rounded-full transition-colors">
               <X size={20} />
             </button>
-            <h3 className="text-2xl font-bold mb-2">Cotiza tu cambio a papel</h3>
-            <p className="text-muted-foreground mb-8">Te ayudamos a migrar tu caja de icopor C1 a un empaque de papel kraft o maulle personalizado. Pedido minimo: 1.000 unidades.</p>
+            <h3 className="text-2xl font-bold mb-2">Cotiza tu empaque personalizado</h3>
+            <p className="text-muted-foreground mb-8">Te ayudamos a cambiar tu caja de icopor por un empaque de papel kraft o maulle personalizado con tu marca. Pedido minimo: 1.000 unidades.</p>
 
             <form onSubmit={handleSubmit} className="space-y-4">
               <div className="space-y-1">

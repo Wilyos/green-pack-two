@@ -17,18 +17,18 @@ const VisualComparisonSection = () => {
           </div>
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
             Dos empaques,{' '}
-            <span className="text-primary">dos historias muy distintas</span>.
+            <span className="text-primary">dos sensaciones para tu cliente</span>.
           </h2>
           <p className="text-sm md:text-base text-muted-foreground max-w-xl">
-            La caja de icopor cumple una funcion basica, pero tambien deja una huella: visual, en la mente de tu cliente y en el entorno. El empaque de papel puede contar otra historia, pero primero vale la pena ver que estas comunicando hoy.
+            La caja de icopor cumple una funcion basica, pero casi nunca dice nada de tu marca. Un empaque de papel bien diseñado puede convertir la entrega en un momento que tus clientes quieren recordar, fotografiar y comentar.
           </p>
           <div className="mt-4 rounded-3xl border border-border bg-background/80 p-5 md:p-6 shadow-elegant">
             <p className="text-xs font-bold uppercase tracking-[0.22em] text-muted-foreground mb-3">Lo que pasa cuando sigues con icopor</p>
             <ul className="space-y-2.5 text-sm md:text-base text-muted-foreground">
               <li>Se ve generico: tu marca casi no aparece o se pierde.</li>
-              <li>Transmite menos cuidado y puede percibirse como "mas de lo mismo".</li>
-              <li>Termina mayoritariamente como residuo de dificil aprovechamiento.</li>
-              <li>No conecta con clientes que ya buscan opciones menos contaminantes.</li>
+              <li>Da sensacion de bajo costo y poco cuidado en los detalles.</li>
+              <li>Es un empaque que el cliente tira rapido; casi nadie quiere mostrarlo.</li>
+              <li>Pierdes una oportunidad de reforzar tu marca en cada entrega.</li>
             </ul>
           </div>
         </motion.div>
@@ -41,7 +41,7 @@ const VisualComparisonSection = () => {
           className="relative rounded-3xl border border-border/80 bg-card/80 shadow-elegant overflow-hidden"
         >
           <img
-            src="/comparativa.png"
+            src="/box/box5.png"
             alt="Comparacion visual entre caja de icopor y empaque de papel personalizado"
             className="h-full w-full object-cover"
             loading="lazy"

@@ -3,24 +3,24 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/
 
 const faqs = [
   {
-    question: '¿Sube mucho el costo si paso de icopor a papel?',
+    question: '¿De verdad un empaque de papel mejora la percepcion de mi marca?',
     answer:
-      'Depende de tu configuracion, pero en muchos casos el cambio no es tan grande como se piensa. Lo que si cambia de forma clara es la percepcion: un empaque de papel bien diseñado se siente mas cuidado, justifica mejor tu precio y puede ayudarte a construir lealtad en el tiempo.',
+      'Si. Un empaque de papel bien diseñado se siente mas cuidado, se percibe de mayor valor y hace que tu producto llegue con mejor primera impresion. Muchas marcas ven mejores comentarios y fotos compartidas cuando el empaque se ve de marca.',
   },
   {
-    question: '¿El papel realmente se recicla?',
+    question: '¿Puedo imprimir mi logo, colores y mensajes?',
     answer:
-      'El papel kraft o maulle puede ser reciclado cuando llega a los puntos de aprovechamiento. No podemos garantizar lo que hace cada operador de residuos, pero elegir un material que puede entrar a estas rutas ya es un paso concreto frente a usar icopor, que tiene opciones mucho mas limitadas.',
+      'Si. Podemos trabajar cajas en papel de calidad con tu logo, colores corporativos y frases clave. Asi logras que el empaque se vea coherente con tu identidad y se reconozca de inmediato.',
   },
   {
-    question: '¿Resiste igual que el icopor?',
+    question: '¿Sirve para domicilios y envios?',
     answer:
-      'Diseñamos el empaque pensando en tu uso real. Para muchos productos, el papel kraft o maulle ofrece una resistencia adecuada para domicilios y punto de venta, con la ventaja adicional de que se ve mejor y se puede personalizar a tu medida.',
+      'Diseñamos el empaque pensando en tu uso real. Para muchos productos, el papel de calidad ofrece una resistencia adecuada para domicilios y punto de venta, con la ventaja adicional de que se ve mejor y se ajusta a tus medidas.',
   },
   {
-    question: '¿Que hago con el inventario de cajas de icopor que ya tengo?',
+    question: '¿Cual es el minimo para hacer un diseño a la medida?',
     answer:
-      'No tienes que botarlo ni cambiar de un dia para otro. Podemos ayudarte a planear una transicion ordenada: usas tu inventario actual mientras defines la imagen de tu nuevo empaque de papel y programas el primer pedido minimo.',
+      'Trabajamos con pedidos minimos desde 1.000 unidades. A partir de ahi puedes definir tamaño, material y tipo de impresion que mejor se ajuste a tu producto y a la experiencia que quieres dar a tus clientes.',
   },
 ];
 
@@ -35,9 +35,9 @@ const FAQSection = () => {
           transition={{ duration: 0.5 }}
           className="mb-10 text-center"
         >
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Preguntas frecuentes sobre el cambio a papel</h2>
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Preguntas frecuentes sobre tu nuevo empaque</h2>
           <p className="mt-3 text-muted-foreground md:text-lg">
-            Resolvemos las dudas mas comunes para que puedas decidir con tranquilidad si es el momento de dejar el icopor y usar mas papel.
+            Resolvemos las dudas mas comunes sobre como cambiar el icopor por una caja de papel personalizada y que impacto puede tener en tus clientes y en tu marca.
           </p>
         </motion.div>
 
