@@ -115,6 +115,15 @@ const HeroSection = ({ onOpenModal }: HeroSectionProps) => {
             className="absolute inset-0 h-full w-full object-cover object-center z-0"
           />
           <div className="absolute inset-0 z-10 bg-gradient-to-b from-black/28 via-black/8 to-black/30 pointer-events-none" />
+          {/* Recuadro de medidas solo en mobile */}
+          <div className="absolute inset-x-4 bottom-4 z-30 sm:hidden pointer-events-none">
+            <div className="pointer-events-auto rounded-2xl border border-white/18 bg-black/70 px-4 py-3 backdrop-blur-xl shadow-[0_16px_35px_rgba(0,0,0,0.55)]">
+              <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-white/55">Medidas de la caja</p>
+              <p className="mt-1 text-sm font-semibold text-white leading-snug">
+                12 ancho · 13 largo · 8 profundidad
+              </p>
+            </div>
+          </div>
           <div className="absolute left-4 right-4 top-4 z-20 rounded-[1.6rem] border border-white/12 bg-black/62 px-4 py-3 backdrop-blur-xl shadow-[0_14px_34px_rgba(0,0,0,0.35)] sm:left-6 sm:right-auto sm:top-6 sm:max-w-[20rem] sm:px-5">
             <div className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.28em] text-white/55">
               <span className="h-2 w-2 rounded-full bg-primary shadow-[0_0_14px_rgba(34,197,94,0.65)]" />
