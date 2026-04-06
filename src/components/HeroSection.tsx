@@ -4,6 +4,17 @@ import { Plane, ArrowRight, Palette, Layers3, Sparkles } from 'lucide-react';
 import { useIsMobile } from '@/hooks/use-mobile';
 
 const heroProduct = '/box/box2.png';
+const WHATSAPP_NUMBER = '573116111687';
+
+const pricingTiers = [
+  { qty: 1000,  price: 900000,  originalPrice: null,    discount: null },
+  { qty: 2000,  price: 1440000, originalPrice: 1800000, discount: 20   },
+  { qty: 3000,  price: 1890000, originalPrice: 2700000, discount: 30   },
+  { qty: 4000,  price: 1800000, originalPrice: 3600000, discount: 50   },
+];
+
+const formatCOP = (n: number) =>
+  '$' + n.toLocaleString('es-CO');
 
 interface HeroSectionProps {
   onOpenModal: () => void;
@@ -17,18 +28,18 @@ const HeroSection = ({ onOpenModal }: HeroSectionProps) => {
   const sellingPoints = [
     {
       icon: Layers3,
-      mobile: 'Caja con tu marca',
-      desktop: 'Caja con tu logo y colores',
+      mobile: 'Nadie postea icopor',
+      desktop: 'Nadie postea un icopor: pierdes alcance organico con cada entrega',
     },
     {
       icon: Sparkles,
-      mobile: 'Se siente de regalo',
-      desktop: 'El empaque se siente como un regalo',
+      mobile: 'Tu marca parece barata',
+      desktop: 'El icopor le dice a tu cliente que tu marca no invierte en si misma',
     },
     {
       icon: Palette,
-      mobile: 'Mejora la experiencia',
-      desktop: 'Mejora la experiencia y la recordacion',
+      mobile: 'Tu competencia ya cambio',
+      desktop: 'Mientras sigues con icopor, tu competencia ya fideliza con caja personalizada',
     },
   ];
 
@@ -50,28 +61,28 @@ const HeroSection = ({ onOpenModal }: HeroSectionProps) => {
         >
           <div className="inline-flex max-w-full items-center gap-2 px-3 sm:px-4 py-2 rounded-full bg-card/90 backdrop-blur-md border border-white/10 text-foreground text-[10px] sm:text-sm font-bold tracking-[0.08em] sm:tracking-wide uppercase shadow-elegant whitespace-nowrap overflow-hidden text-ellipsis">
             <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-            <span className="sm:hidden">Tu empaque tambien vende</span>
-            <span className="hidden sm:inline">Estas a un paso de cambiar el icopor por una caja personalizada</span>
+            <span className="sm:hidden">El icopor le esta costando clientes</span>
+            <span className="hidden sm:inline">Cada caja de icopor que entregas es una marca que se ve barata y olvidable</span>
           </div>
           <h1 className="text-[2.25rem] sm:text-6xl lg:text-7xl font-bold tracking-tight leading-[0.98] [text-wrap:pretty]">
             <span className="block sm:hidden">
-              Tu empaque tambien vende.
-              <span className="text-primary block">Haz que tu caja se vea Premium.</span>
+              El icopor arruina lo que vendes.
+              <span className="text-primary block">Haz que tu marca por fin se vea lo que vale.</span>
             </span>
             <span className="hidden sm:inline">
-              Tu empaque tambien vende.{' '}
-              <span className="text-primary inline">Cambia el icopor por caja de papel con tu marca.</span>
+              El icopor hace ver tu producto barato.{' '}
+              <span className="text-primary inline">Deja de regalar mal la primera impresion.</span>
             </span>
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground max-w-lg leading-relaxed">
             <span className="sm:hidden">
-              Pasa de un icopor que se olvida a una caja de papel que se ve fotografiable y coherente con tu marca.
+              Nadie postea un icopor. Nadie recuerda la marca que llega en un bloque blanco. Tu competencia ya cambio. ¿Tu sigues igual?
             </span>
             <span className="hidden sm:inline">
-              Tus clientes miran el empaque antes de probar el producto. Cambiar el icopor por una caja de papel personalizada hace que tu marca se sienta mas cuidada, memorable y digna de foto.
+              Tu cliente decide si vuelve o no en los primeros 10 segundos de abrir el pedido. Si lo que ve es icopor, la respuesta es clara: no vuelve, no postea, no recomienda. Una caja de papel personalizada lo cambia todo.
             </span>
           </p>
-          <div className="grid grid-cols-2 gap-3 md:grid-cols-3">
+          <div className="hidden sm:grid grid-cols-2 gap-3 md:grid-cols-3">
             {sellingPoints.map(({ icon: Icon, mobile, desktop }) => (
               <div
                 key={desktop}
@@ -85,14 +96,56 @@ const HeroSection = ({ onOpenModal }: HeroSectionProps) => {
               </div>
             ))}
           </div>
+          {/* Pricing cards — solo mobile */}
+          <div className="sm:hidden grid grid-cols-2 gap-2.5">
+            {pricingTiers.map(({ qty, price, originalPrice, discount }) => {
+              const msg = `Hola estoy interesado en adquirir la promo de ${qty.toLocaleString('es-CO')} empaques de la C1 de papel`;
+              const waUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
+              return (
+                <div
+                  key={qty}
+                  className="rounded-2xl border border-white/10 bg-card/90 backdrop-blur-md px-4 py-4 flex flex-col gap-2 shadow-elegant"
+                >
+                  {discount !== null && (
+                    <span className="text-[9px] font-bold uppercase tracking-widest text-primary">
+                      -{discount}% off
+                    </span>
+                  )}
+                  <p className="text-[11px] font-bold uppercase tracking-[0.14em] text-muted-foreground leading-tight">
+                    {qty.toLocaleString('es-CO')} empaques
+                  </p>
+                  <div>
+                    <p className="text-[9px] uppercase tracking-widest text-muted-foreground">Desde</p>
+                    <p className="text-[1.35rem] font-bold leading-none text-foreground">
+                      {formatCOP(price)}
+                    </p>
+                    {originalPrice !== null && (
+                      <p className="text-xs line-through text-muted-foreground/55 mt-0.5">
+                        {formatCOP(originalPrice)}
+                      </p>
+                    )}
+                  </div>
+                  <a
+                    href={waUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-1 inline-flex items-center justify-center gap-1.5 rounded-full bg-primary px-3 py-2 text-xs font-semibold text-primary-foreground hover:brightness-95 transition-all"
+                  >
+                    Comprar <ArrowRight size={12} />
+                  </a>
+                </div>
+              );
+            })}
+          </div>
+
           <div className="flex flex-col sm:flex-row gap-4">
             <motion.button
               whileTap={{ scale: 0.98 }}
               onClick={onOpenModal}
               className="w-full sm:w-auto px-6 sm:px-8 py-4 bg-primary text-primary-foreground rounded-full font-semibold shadow-glow hover:brightness-95 transition-all flex items-center justify-center gap-2 text-base whitespace-nowrap"
             >
-              <span className="sm:hidden">Quiero dejar el icopor</span>
-              <span className="hidden sm:inline">Haz el cambio ahora</span>
+              <span className="sm:hidden">Quiero salvar mi marca</span>
+              <span className="hidden sm:inline">Dejar el icopor hoy</span>
               <ArrowRight size={20} />
             </motion.button>
             <div className="flex items-center gap-4 px-2 sm:px-6 text-sm font-medium text-muted-foreground">
@@ -127,21 +180,21 @@ const HeroSection = ({ onOpenModal }: HeroSectionProps) => {
           <div className="absolute left-4 right-4 top-4 z-20 rounded-[1.6rem] border border-white/12 bg-black/62 px-4 py-3 backdrop-blur-xl shadow-[0_14px_34px_rgba(0,0,0,0.35)] sm:left-6 sm:right-auto sm:top-6 sm:max-w-[20rem] sm:px-5">
             <div className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.28em] text-white/55">
               <span className="h-2 w-2 rounded-full bg-primary shadow-[0_0_14px_rgba(34,197,94,0.65)]" />
-              Impacto que se ve
+              El icopor te delata
             </div>
             <p className="mt-2 text-sm sm:text-[15px] font-semibold leading-tight text-white">
-              <span className="sm:hidden">Tu caja ya no se siente desechable</span>
-              <span className="hidden sm:inline">Tu cliente percibe, desde el empaque, que tu marca cuida los detalles</span>
+              <span className="sm:hidden">Con icopor, tu primera impresion es un fracaso</span>
+              <span className="hidden sm:inline">Tu cliente te juzga antes de probar el producto: el icopor les dice que no te importa</span>
             </p>
           </div>
           <div className="hidden md:grid absolute bottom-5 left-5 right-5 z-20 grid-cols-2 gap-3 md:w-64 md:left-auto md:right-6 md:bottom-6">
             <div className="rounded-2xl bg-background/85 px-4 py-3 backdrop-blur-md shadow-elegant">
               <div className="text-xs uppercase tracking-[0.18em] text-muted-foreground">Icopor</div>
-              <div className="mt-1 text-sm font-semibold">Simple</div>
+              <div className="mt-1 text-sm font-semibold">Te hace ver barato</div>
             </div>
             <div className="rounded-2xl bg-secondary px-4 py-3 text-secondary-foreground shadow-elegant">
-              <div className="text-xs uppercase tracking-[0.18em] text-primary/80">Papel de calidad</div>
-              <div className="mt-1 text-sm font-semibold">A la medida de tu marca</div>
+              <div className="text-xs uppercase tracking-[0.18em] text-primary/80">C1 de papel</div>
+              <div className="mt-1 text-sm font-semibold">Tu marca al nivel que merece</div>
             </div>
           </div>
         </motion.div>
